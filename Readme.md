@@ -77,7 +77,7 @@
 The GUI and Arduino firmware communicate over a serial link (9600 baud) using simple ASCII commands terminated by newline. The Python side formats and sends these commands via `ser.write((cmd + " ").encode())`. The supported commands are:
 
 * `EYE <x> <y>`: Real‑time eye position, where `<x>` and `<y>` are floats in the range \[-50.00, 50.00]. These represent horizontal and vertical displacements as percentages of full travel. The Arduino maps these values to pan/tilt servo angles to direct the eyeball.
-* `LID <delta>`: Incrementally adjust the eyelid by `<delta>` steps (positive to open, negative to close). Each mouse wheel tick sends `delta = ±1` citeturn2file3.
+* `LID <delta>`: Incrementally adjust the eyelid by `<delta>` steps (positive to open, negative to close). Each mouse wheel tick sends `delta = ±1`.
 * `BLINK`: Trigger a full blink sequence—quickly closing and reopening the eyelid via the servo control.
 
 When dragging the mouse, `EYE` commands are dispatched at up to 10 Hz (controlled by `send_interval = 0.01`) to ensure smooth, responsive eye movement.
