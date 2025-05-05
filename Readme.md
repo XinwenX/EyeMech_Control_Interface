@@ -2,7 +2,7 @@
 
 **EyeMech Control Interface** is a desktop application that provides an intuitive way to control a 3D eyeball mechanism using mouse interactions. Built upon Will Cogley’s EyeMech 1.0 hardware design, this project integrates a Python‑based GUI with custom Arduino firmware to enable real‑time eye movements, blinking, and eyelid adjustments. It is ideal for makers, educators, and robotics enthusiasts interested in experimenting with animatronic eye control.
 
-<img src="EyeMech_Control_Interface.png" alt="EyeMech Control Interface" width="400"/>
+\<img src="EyeMech\_Control\_Interface.png" alt="EyeMech Control Interface" width="400"/>
 
 ---
 
@@ -12,6 +12,10 @@
 * **Blink**: Right‑click to trigger a blink.
 * **Eyelid control**: Use the mouse wheel to open or close the eyelid incrementally.
 * **Serial Port Management**: Select, update, and connect to available COM ports.
+
+## Demo Video
+
+Watch a quick demo of the interface in action: [EyeMech Control Interface demo](https://youtu.be/BljF-0C3-1Y)
 
 ## Hardware Requirements
 
