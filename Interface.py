@@ -201,10 +201,15 @@ class Interface:
         self.eye.move_eye(map_x, map_y)
 
     def _on_wheel(self, event):
-        if hasattr(event, "delta"):
+        # delta（Windows/macOS）
+        if getattr(event, "delta", 0):
+            # In Windows, delta is a multiple of ±120
             delta = event.delta // 120
-        else:
+        # num（Linux）
+        elif getattr(event, "num", None) in (4, 5):
             delta = 1 if event.num == 4 else -1
+        else:
+            return  # No mouse wheel event detected
         self.eye.control_lid(delta)
 
     def _on_right_click(self, event):
